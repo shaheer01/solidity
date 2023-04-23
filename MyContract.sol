@@ -16,7 +16,7 @@ contract MyContract {
     }
 
     function set(string memory _value) public {
-        return value = _value;
+        value = _value;
     }
 
     function activate() public {

@@ -5,6 +5,19 @@ contract MyContract {
     string value;
     enum State {waiting, active, ready};
     string public state;
+    mapping{uint => Person} public people;
+    uint256 id =0;
+
+    struct Person {
+        uint _id;
+        string _firstName;
+        string _lastName;
+    }
+
+    function addPerson(string firstName, string lastname) public {
+        id += 1;
+        people[id] = Person(id, firstName, lastName);
+    }
 
     constructor(){
         value = "myValue";
